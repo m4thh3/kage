@@ -1,0 +1,285 @@
+/* ==================== CONFIGURAÇÕES GERAIS ==================== */
+:root {
+    --cor-principal: hsl(0, 88%, 33%); /* Roxo Streetwear */
+    --cor-fundo: #080808; /* Fundo geral escuro */
+    --cor-card: #121212; /* Fundo dos blocos de produto */
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.5);
+    --border: .1rem solid rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-family: 'Dalphn';
+}
+
+html {
+    font-size: 62.5%; 
+    scroll-behavior: smooth;
+    background-color: var(--cor-fundo);
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color:#c7c7c7; ;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+/* ==================== CABEÇALHO (NAVBAR) ==================== */
+.header {
+    position: fixed; 
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: #0d0d0d; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 1.2rem 9%; 
+    box-shadow: var(--box-shadow);
+    height: 7rem;
+    border-bottom: var(--border);
+}
+
+.header .logo {
+    font-size: 3rem; 
+    font-weight: 900; 
+    color: #c7c7c7; ;
+    letter-spacing: 2px;
+}
+
+.header .logo span { 
+    color: var(--cor-principal); 
+}
+
+.header .navbar a {
+    font-size: 1.8rem; 
+    margin: 0 1.5rem; 
+    color: #aaa; 
+}
+
+.header .navbar a:hover { 
+    color: var(--cor-principal); 
+}
+
+.header .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .icons div {
+    height: 4rem; 
+    width: 4rem; 
+    line-height: 4rem;
+    border-radius: .5rem; 
+    background: #1a1a1a; 
+    color: #504f4f; 
+    font-size: 1.6rem;
+    cursor: pointer; 
+    text-align: center;
+}
+
+.header .icons div:hover { 
+    background: var(--cor-principal); 
+    color: #fff; 
+}
+
+/* ==================== TOPO DO SITE (IMAGEM DA FACHADA) ==================== */
+.banner {
+    display: flex; 
+    align-items: center;
+    
+    /* A imagem da fachada fica restrita APENAS a este bloco do topo */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), 
+                url('ChatGPT\ Image\ 27\ de\ mai.\ de\ 2026\,\ 18_08_16.png') no-repeat;
+    
+    background-size: cover; 
+    background-position: center;
+    min-height: 92vh; 
+    padding-top: 12rem;
+}
+
+.banner .banner-content { max-width: 60rem; }
+
+.banner .banner-content h3 {
+    font-size: 5.5rem; 
+    color: #c7c7c7; 
+    padding-bottom: 1rem;
+    font-weight: 900;
+    text-shadow: 2px 2px var(--cor-principal);
+}
+
+.banner .banner-content p {
+    font-size: 1.8rem; 
+    color: #ccc; 
+    padding: 1rem 0; 
+    line-height: 1.8;
+}
+
+.btn {
+    margin-top: 2rem; 
+    display: inline-block; 
+    padding: 1rem 3.5rem;
+    font-size: 1.6rem; 
+    border-radius: .3rem; 
+    border: .2rem solid var(--cor-principal);
+    color: #fff; 
+    background: transparent; 
+    cursor: pointer; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn:hover { 
+    background: var(--cor-principal); 
+    box-shadow: 0 0 15px var(--cor-principal);
+}
+
+/* ==================== SEÇÃO DROP EXCLUSIVO (FUNDO PRETO TOTAL) ==================== */
+.produtos {
+    background-color: #000000; /* Força o fundo a ser inteiramente preto nesta parte */
+}
+
+.heading {
+    text-align: center; 
+    padding: 4rem 0; 
+    font-size: 3.5rem; 
+    color: #fff;
+}
+
+.heading span {
+    border-bottom: 3px solid var(--cor-principal);
+    padding-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.produtos .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2.5rem;
+}
+
+.produtos .box-container .box {
+    background: var(--cor-card); 
+    border-radius: .5rem;
+    border: var(--border); 
+    box-shadow: var(--box-shadow);
+    position: relative; 
+    overflow: hidden;
+}
+
+.produtos .box-container .box .image {
+    height: 38rem; 
+    width: 100%; 
+    overflow: hidden; 
+    position: relative;
+    background: #1e1e1e;
+}
+
+.produtos .box-container .box .image img {
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.produtos .box-container .box:hover .image img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.tag-promo {
+    position: absolute;
+    top: 1.5rem; left: 1.5rem;
+    background: #ff2a2a;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: .5rem 1.2rem;
+    border-radius: .3rem;
+    z-index: 10;
+}
+
+.produtos .box-container .box .image .icons-produto {
+    position: absolute; 
+    bottom: -10rem; right: 1.5rem;
+    display: flex;
+}
+
+.produtos .box-container .box:hover .image .icons-produto { 
+    bottom: 1.5rem; 
+}
+
+.produtos .box-container .box .image .icons-produto a {
+    height: 5rem; 
+    width: 5rem; 
+    line-height: 5rem;
+    font-size: 2rem; 
+    color: #fff; 
+    background: var(--cor-principal);
+    border-radius: 50%; 
+    text-align: center; 
+    box-shadow: var(--box-shadow);
+}
+
+.produtos .box-container .box .image .icons-produto a:hover { 
+    background: #fff; 
+    color: var(--cor-principal); 
+}
+
+.produtos .box-container .box .content { 
+    padding: 2rem; 
+    background: #141414;
+}
+
+.produtos .box-container .box .content h3 { 
+    font-size: 1.8rem; 
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.produtos .box-container .box .content .price { 
+    font-size: 2.2rem; 
+    color: var(--cor-principal); 
+    font-weight: bold;
+}
+
+.produtos .box-container .box .content .price span { 
+    font-size: 1.5rem; 
+    color: #666; 
+    text-decoration: line-through; 
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
+/* ==================== RODAPÉ ==================== */
+.footer { 
+    background: #0d0d0d; 
+    border-top: var(--border); 
+    text-align: center; 
+    padding: 3rem;
+    margin-top: 5rem;
+}
+
+.footer .credit { 
+    font-size: 1.6rem; 
+    color: #aaa; 
+}
+
+.footer .credit span { 
+    color: var(--cor-principal); 
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    html { font-size: 50%; }
+    .header { padding: 1.2rem 4%; }
+    section { padding: 4rem 4%; }
+    .header .navbar { display: none; } 
+}
