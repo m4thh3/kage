@@ -3,9 +3,8 @@
     --bg-card: #151515;
     --bg-input: #202020;
     --text-main: #f5f5f5;
-    --text-muted: #b7b7b7;
-    --red-kage: #e00000;
-    --red-dark: #9f0000;
+    --text-muted: hsl(0, 88%, 33%);
+    --red-dark: hsl(0, 88%, 33%);
     --white-logo: #f4f1e8;
     --border-color: #333333;
 }

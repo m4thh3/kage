@@ -35,9 +35,8 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
-    alert("Conta KAGE criada com sucesso!");
-
-    window.location.href = "login.html";
+    alert("Seja bem-vindo!!!")
+    window.location.href = "face.html";
 });
 
 function validarEmail(email) {
@@ -46,6 +45,5 @@ function validarEmail(email) {
 }
 
 function entrarSemCadastro() {
-    alert("Entrando como visitante...");
     window.location.href = "face.html";
 }

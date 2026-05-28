@@ -1,0 +1,122 @@
+:root {
+    --bg-color: #0d0d0d;
+    --card-color: #171717;
+    --text-color: #f5f5f5;
+    --red-kage: #e00000;
+    --red-dark: #9f0000;
+    --input-bg: #202020;
+    --border-color: #3a3a3a;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1c1c1c 0%, #080808 65%);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 360px;
+    background: rgba(18, 18, 18, 0.95);
+    border: 1px solid #2b2b2b;
+    border-radius: 12px;
+    padding: 38px;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(0,0,0,0.8);
+}
+
+.logo-kage {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 46px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.logo-white {
+    color: #f4f1e8;
+}
+
+.logo-red {
+    color: var(--red-kage);
+}
+
+.login-container h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #d8d8d8;
+    font-weight: 400;
+}
+
+.input-box {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 13px;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-box:focus {
+    border-color: var(--red-kage);
+}
+
+.btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    background: var(--red-kage);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--red-dark);
+    transform: scale(1.02);
+}
+
+.option {
+    margin-top: 16px;
+    color: #bdbdbd;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.option:hover {
+    color: var(--red-kage);
+}
+
+.divider {
+    margin: 22px 0;
+    height: 1px;
+    background: #333;
+}
+
+.option {
+    margin-top: 15px;       /* espaço acima da opção */
+    display: inline-block;  /* permite controlar margem */
+    text-decoration: none;  /* remove a linha embaixo */
+    color: var(--red-kage); /* mantém vermelho */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    color: var(--red-dark); /* muda a cor quando passar o mouse */
+}

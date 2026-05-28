@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento | Moda Urbana</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg, #111, #1f1f1f);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container{
+            width: 100%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card{
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .title{
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        .subtitle{
+            color: gray;
+            margin-bottom: 25px;
+        }
+
+        .input-box{
+            margin-bottom: 20px;
+        }
+
+        .input-box label{
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .input-box input,
+        .input-box select{
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .btn{
+            width: 100%;
+            padding: 15px;
+            background: #8000ff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: #e65c00;
+        }
+
+        .pix-area{
+            text-align: center;
+        }
+
+        .pix-box{
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .pix-box img{
+            width: 230px;
+            margin-top: 15px;
+        }
+
+        .pix-code{
+            margin-top: 15px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            word-break: break-all;
+            border: 1px solid #ddd;
+        }
+
+        .secure{
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+
+        .icons{
+            margin-top: 15px;
+            font-size: 28px;
+            color: #444;
+        }
+
+        .icons i{
+            margin: 0 10px;
+        }
+
+        @media(max-width: 850px){
+
+            .container{
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1 class="title">
+                Finalizar Compra
+            </h1>
+
+            <p class="subtitle">
+                Preencha seus dados para concluir o pagamento
+            </p>
+
+            <div class="input-box">
+                <label>Nome Completo</label>
+                <input type="text" placeholder="Digite seu nome">
+            </div>
+
+            <div class="input-box">
+                <label>Número do Cartão</label>
+                <input type="text" placeholder="0000 0000 0000 0000">
+            </div>
+
+            <div class="input-box">
+                <label>Validade</label>
+                <input type="text" placeholder="MM/AA">
+            </div>
+
+            <div class="input-box">
+                <label>CVV</label>
+                <input type="password" placeholder="123">
+            </div>
+
+            <div class="input-box">
+                <label>Forma de Pagamento</label>
+
+                <select>
+                    <option>Cartão de Crédito</option>
+                    <option>PIX</option>
+                    <option>Boleto Bancário</option>
+                </select>
+            </div>
+
+            <button class="btn" onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+
+            <div class="secure">
+                🔒 Pagamento 100% Seguro
+            </div>
+
+            <div class="icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-pix"></i>
+            </div>
+
+        </div>
+
+        <div class="card pix-area">
+
+            <h1 class="title">
+                Pagamento via PIX
+            </h1>
+
+            <p class="subtitle">
+                Escaneie o QR Code abaixo para pagar
+            </p>
+
+            <div class="pix-box">
+
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=230x230&data=PIX-MODA-URBANA-2026" alt="QR Code PIX">
+
+                <div class="pix-code">
+                    00020126580014BR.GOV.BCB.PIX0136pix@modaurbana.com520400005303986540599.905802BR5920MODA URBANA LTDA6009SAOPAULO62070503***6304ABCD
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function finalizarCompra(){
+
+            alert("Pagamento realizado com sucesso!");
+
+        }
+
+    </script>
+
+</body>
+</html>
